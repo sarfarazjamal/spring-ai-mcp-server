@@ -29,11 +29,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Service
 public class Tools {
 
-    private final WebClient webClient;
-
-    public Tools(WebClient.Builder builder) {
-        this.webClient = builder.build();
-    }
+    private final WebClient webClient = WebClient.builder().build();
 
 
     @McpTool(description = "Returns the current server time")
